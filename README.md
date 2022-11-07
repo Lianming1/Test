@@ -1,12 +1,12 @@
 # Test
-##Requisiti
+## Requisiti
 - IDE Ecplipse (Ambiente di sviluppo si consiglia di usare ecplipse poiche tutto il progetto è svolto interamente su Eclipse)
 
 - MySQL (DB utilizzato)
 
 - JDK installato
 
-##Istruzioni
+## Istruzioni
  Si consiglia l'utilizzo dell'ambiente di sviluppo ecplipse per importare l'applicazione sviluppata, Inoltre è richiesto l'utilizzo della base di dati mySql.
  
  All'interno della base di dati deve essere istanziata un database chiamato 'offerte', si deve eseguire import dalla cartella dbdump della tabella di riferimento, inoltre si deve impostare accesso del db 'offerte' sulla porta 3305.
@@ -17,8 +17,10 @@ L'applicazione sviluppata consente di inserire il nome di un prodotto e la quant
 Sono presenti tre tipologie di scontistica:
 - per quantità
 - per totale importo
-- per stagione
+- per stagione(il sistema determina la stagione in base alla data corrente)
+
 Può essere applicato tutte e tre le tipologie di scontistica a un prodotto.
+
 - Ad Esempio:
 	- totale iniziale : 100$ scontoQuantità: 10% sconto stagione : 1%  prezzo finale : 89$
 	
