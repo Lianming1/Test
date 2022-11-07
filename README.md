@@ -1,6 +1,6 @@
 # Test
 ##Requisiti
--IDE Ecplipse (Ambiente di sviluppo si consiglia di usare ecplipse poiche tutto il progetto è svolto interamente su Eclipse)
+- IDE Ecplipse (Ambiente di sviluppo si consiglia di usare ecplipse poiche tutto il progetto è svolto interamente su Eclipse)
 
 - MySQL (DB utilizzato)
 

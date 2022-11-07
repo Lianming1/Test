@@ -13,7 +13,7 @@ public class Comparatore
 	private int Quantita;
 	private List<Fornitore> listaFornitori;
 	
-	private static final String SQL_NOMI_FORNITORI="SELECT DISTINCT Fornitore,Prezzo FROM offerte.offerta";
+	private static final String SQL_NOMI_FORNITORI="SELECT DISTINCT Fornitore FROM offerte.offerta";
 	public Comparatore(String nome, int quantita) {
 		
 		setNomeProdotto(nome);
@@ -32,7 +32,7 @@ public class Comparatore
 			while(rs.next()) {
 				String nomeFornitore=rs.getString("Fornitore");
 				Fornitore nuovo= new Fornitore(nomeFornitore);
-				nuovo.inizializzaOfferte(nomeProdotto, Quantita, rs.getFloat("Prezzo"));
+				nuovo.inizializzaOfferte(nomeProdotto, Quantita);
 				listaFornitori.add(nuovo);
 				
 			}
