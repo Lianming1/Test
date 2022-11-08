@@ -6,6 +6,8 @@
 
 - JDK installato
 
+- SWING( è stato usato java swing per la grafica)
+
 ## Istruzioni
  Si consiglia l'utilizzo dell'ambiente di sviluppo ecplipse per importare l'applicazione sviluppata, Inoltre è richiesto l'utilizzo della base di dati mySql.
  
