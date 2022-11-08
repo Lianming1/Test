@@ -40,7 +40,7 @@ CREATE TABLE `offerta` (
   CONSTRAINT `offerta_chk_1` CHECK (((`scontoQuantita` = _utf8mb4'Y') or (`scontoQuantita` = _utf8mb4'N'))),
   CONSTRAINT `offerta_chk_2` CHECK (((`scontoTotale` = _utf8mb4'Y') or (`scontoTotale` = _utf8mb4'N'))),
   CONSTRAINT `offerta_chk_3` CHECK (((`scontoStagione` = _utf8mb4'Y') or (`scontoStagione` = _utf8mb4'N')))
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,7 +49,7 @@ CREATE TABLE `offerta` (
 
 LOCK TABLES `offerta` WRITE;
 /*!40000 ALTER TABLE `offerta` DISABLE KEYS */;
-INSERT INTO `offerta` VALUES (1,'mediaworld','PC',300,30,10,'Y',10,'N',0,'N','nessuno',4),(2,'euronics','PC',280,40,7,'N',0,'Y',1000,'N','nessuno',3),(3,'trony','PC',250,10,12,'N',0,'N',0,'Y','autunno',5),(4,'mediaWorld','PC',300,30,1,'N',0,'Y',3000,'N','nessuno',4);
+INSERT INTO `offerta` VALUES (1,'mediaworld','PC',300,30,10,'Y',10,'N',0,'N','nessuno',4),(2,'euronics','PC',280,40,7,'N',0,'Y',1000,'N','nessuno',3),(3,'trony','PC',250,15,12,'N',0,'N',0,'Y','autunno',5),(4,'mediaWorld','PC',300,30,1,'N',0,'Y',3000,'N','nessuno',4),(5,'dell','PC',210,15,6,'Y',12,'N',0,'N','nessuno',6),(7,'dell','USB',20,35,6,'Y',30,'N',0,'N','nessuno',5),(8,'mediaworld','USB',22,50,7,'N',0,'Y',200,'N','nessuno',1),(9,'trony','USB',25,55,11,'N',0,'N',0,'Y','autunno',1);
 /*!40000 ALTER TABLE `offerta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -62,4 +62,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-07 11:34:10
+-- Dump completed on 2022-11-08  9:21:12
