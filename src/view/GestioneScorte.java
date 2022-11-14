@@ -26,6 +26,7 @@ public class GestioneScorte {
 	private JTextField inputQuantita;
 	private JButton btnCercaOfferte;
 	private Controller control;
+	private Proposte Prop;
 	/**
 	 * Launch the application.
 	 */
@@ -86,7 +87,7 @@ public class GestioneScorte {
 		btnCercaOfferte = new JButton("Cerca");
 		btnCercaOfferte.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String variabile= inputProdotto.getText();
+				
 				if(inputProdotto.getText().equals("") || inputQuantita.getText().equals("")) {
 					JOptionPane.showInternalMessageDialog(null, "non è possibile procedere senza inserire i campi");
 				}else {
@@ -96,7 +97,7 @@ public class GestioneScorte {
 				if(lista.isEmpty()) {
 					JOptionPane.showInternalMessageDialog(null, "nessuna offerta trovata");
 				}else {
-				Proposte Prop= new Proposte(lista);
+				 Prop= new Proposte(lista);
 				}
 			}
 			}

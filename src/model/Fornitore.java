@@ -12,12 +12,14 @@ public class Fornitore {
 	private List<Offerte> listaOfferte;
 	private Proposta totaleProposta;
 	public static final String SQL_PREZZO= "SELECT Prezzo FROM offerte.offerta WHERE Fornitore=? AND Prodotto=? AND Magazzino>=?";
+	public static final String SQL_GIORNI_SPEDIZIONE="SELECT Spedizione FROM offerte.offerta WHERE Fornitore=? AND Prodotto=? AND Magazzino>=?";
 	public Fornitore(String nome) {
 		setNomeFornitore(nome);
 	   listaOfferte= new ArrayList<>();
 	}
 	
 	public void inizializzaOfferte(String nomeProdotto,int quantita){
+		int giorniSpedizioneNormali=GiorniSpedizione(nomeProdotto, quantita);
 		Offerte offertaQuantita=CalcolaScontoQuantitaMigliore.TrovaMiglioreScontoQuantita(NomeFornitore,nomeProdotto, quantita);
 		if(offertaQuantita!=null) {
 		listaOfferte.add(offertaQuantita);
@@ -31,32 +33,61 @@ public class Fornitore {
 		if(offertaStagione!=null) {
 			listaOfferte.add(offertaStagione);
 		}
-		if(listaOfferte.isEmpty()) {
-			totaleProposta=null;
-		}
-		if(!listaOfferte.isEmpty()) {
-			formulaProposta(quantita,Prezzo);
-		}
+		if(Prezzo !=0) {
+		formulaProposta(quantita, Prezzo, giorniSpedizioneNormali);
 		
-		
+		}
 	}
-	public void formulaProposta(int quantita, float prezzo) 
+	public void formulaProposta(int quantita, float prezzo,int giorniSpedizione) 
 	{
 		float totale= quantita*prezzo;
 		float fisso = quantita*prezzo;
-		int giorniSpedizione=0;
+		int giorniSpedizioneOfferte=0;
+		if(listaOfferte.isEmpty()) {
+			
+			Proposta ultima= new Proposta(NomeFornitore, totale, giorniSpedizione);
+			setTotaleProposta(ultima);
+		}else {
 		for(Offerte x: listaOfferte) {
 			
 			totale=totale - (fisso*x.getPercentuale()/100);
-			if(giorniSpedizione==0) {
-				giorniSpedizione=x.getGiorniSpedizione();
-			}else if(giorniSpedizione>x.getGiorniSpedizione()) {
-				giorniSpedizione=x.getGiorniSpedizione();
+			if(giorniSpedizioneOfferte==0) {
+				giorniSpedizioneOfferte=x.getGiorniSpedizione();
+			}else if(giorniSpedizioneOfferte>x.getGiorniSpedizione()) {
+				giorniSpedizioneOfferte=x.getGiorniSpedizione();
 			}
 			
 		}
-		Proposta ultima= new Proposta(NomeFornitore, totale,giorniSpedizione);
+		Proposta ultima= new Proposta(NomeFornitore, totale,giorniSpedizioneOfferte);
 		setTotaleProposta(ultima);
+		}
+	}
+	public int GiorniSpedizione(String nomeProdotto, float quantita) {
+		int giorniSpedizione=0;
+		PreparedStatement stmt ;
+		Connection con = ConnectionManager.getConnection();
+		ResultSet rs = null;
+		try {
+			 stmt=con.prepareStatement(SQL_GIORNI_SPEDIZIONE);
+			 stmt.setString(1, this.NomeFornitore);
+			 stmt.setString(2, nomeProdotto);
+			 stmt.setFloat(3, quantita);
+			rs= stmt.executeQuery();
+			while(rs.next()) {
+				
+			 if(giorniSpedizione<=rs.getInt("Spedizione")) {
+				giorniSpedizione= rs.getInt("Spedizione");
+			 }
+			}
+		
+			rs.close();
+			
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return giorniSpedizione;
 	}
 	public float recuperaPrezzo(String NomeProdotto, int quantita) {
 		float Prezzo=0;
