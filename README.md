@@ -24,11 +24,12 @@ Sono presenti tre tipologie di scontistica:
 
 Può essere applicato tutte e tre le tipologie di scontistica a un prodotto.
 
-- Ad esempio :
-	+ totale iniziale : 100€ scontoQuantità: 10% sconto stagione : 1%  prezzo finale : 89€
 
-
-
+- Ad esempio : 
+    - Totale iniziale  :  100€    
+    - Sconto quantità  :  10%
+    - Sconto stagione  :  1%
+    - Prezzo finale    :	89€
 	
 L'applicazione, quando non trova il nome del prodotto nel db o la quantità selezionata è superiore al quantità presente nel magazzina di tutti fornitori, segnala all'utente un messagio 'nessuna offerta trovata'.
 
@@ -36,22 +37,21 @@ Invece, quando trova delle offerte, il sistema elenca in base all'importo che si
 il sistema presenta le offerte indicando il nome del fornitore, importo complessivo da pagare e i giorni di spedizione.
 
 - Ad esempio : 
-	+  fornitore        : trony 
-	 
-	+  Prezzo           : 2100 
-	 
-	+  Giorni Spedizione: 2
+    - Fornitore        : trony  
+    - Prezzo           : 2100 
+    - Giorni Spedizione : 2 
 
 Se un prodotto di un certo fornitore risulta essere più conveniente senza sconti viene preso in considerazione il prodotto senza sconti:
 
-- Ad esempio :
-	+ fornitore1 con lo sconto  presenta un prezzo uguale al 100€
-	+ fornitore2 non presenta sconti ma presenta un prezzo uguale al 90€
-- Output :
-	+ fornitore2 Prezzo Giorni_di_Spedizione
-	+ fornitore1 Prezzo Giorni_di_Spedizione
+- Ad esempio : 
+    - Fornitore1 con lo sconto  presenta un prezzo uguale al 100€
+    - Fornitore2 non presenta sconti ma presenta un prezzo uguale al 90€
+- Ad esempio : 
+    - Fornitore2 | Prezzo |Giorni_di_Spedizione
+    - Fornitore1 | Prezzo |Giorni_di_Spedizione
 	
 
 Nel caso non arrivi a 3 offerte i campi dei vengono lasciati vuoti.
 
- 
+
+
