@@ -217,6 +217,7 @@ public class InserimentoOfferta extends JFrame {
 					
 				}
 				control=new CaricaOfferte(nuova);
+				dispose();
 				}else {
 					JOptionPane.showInternalMessageDialog(null, "Attenzione deve selezionare una tipologia di scontistica prima");
 				}
