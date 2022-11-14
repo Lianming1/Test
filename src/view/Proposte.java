@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import model.OffertaSingola;
 import model.Proposta;
 
 import javax.swing.JLabel;
@@ -203,16 +204,6 @@ public class Proposte extends JFrame {
 		});
 		btnRitorna.setBounds(150, 321, 128, 32);
 		contentPane.add(btnRitorna);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 	}

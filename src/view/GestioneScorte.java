@@ -27,6 +27,7 @@ public class GestioneScorte {
 	private JButton btnCercaOfferte;
 	private Controller control;
 	private Proposte Prop;
+	private JButton btnNewOffer;
 	/**
 	 * Launch the application.
 	 */
@@ -105,5 +106,15 @@ public class GestioneScorte {
 		btnCercaOfferte.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnCercaOfferte.setBounds(239, 157, 112, 39);
 		frame.getContentPane().add(btnCercaOfferte);
+		
+		btnNewOffer = new JButton("Inserisci offerta");
+		btnNewOffer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				InserimentoOfferta nuovaOfferta= new InserimentoOfferta();
+			}
+		});
+		btnNewOffer.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewOffer.setBounds(50, 157, 148, 39);
+		frame.getContentPane().add(btnNewOffer);
 	}
 }
