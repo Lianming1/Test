@@ -54,4 +54,19 @@ Se un prodotto di un certo fornitore risulta essere più conveniente senza scont
 Nel caso non arrivi a 3 offerte i campi dei vengono lasciati vuoti.
 
 
+L'applicazione inoltre consente inserimento di un offerta nella base di dati compilando un modulo apposta richiesto con per l'inserimento, per inserimento sarà richiesto:
+- Fornitore, che è concesso di iniziare con un carattere alfabetico e contiene solo caratteri alfanumerici.
+- Prodotto, che è concesso di iniziare con un carattere alfabetico e contiene solo   caratteri alfanumerici.
+- Prezzo che consente inserimento di un valore numerico con la virgola.
+- Magazzino che consente inserimento di una valore numerico intero.
+- Tipologia di sconto da spuntare:
+    - Sconto quantita, nel momento che lo selezioni viene disativatto le due tipologie 		di scontistica e viene attivato il campo quantità.
+    - sconto importo, nel momento che lo selezioni viene disativatto le due tipologie di s		contistica e viene attivato il campo importo
+    - sconto stagione, nel momento che lo selezioni viene disativatto le due tipologie 		di scontistica e viene attivato il campo di selezione per selezionare quale 		delle 4 stagioni indica.
+
+nel momento che si è terminato la compilazione, si deve schiacciare il bottone "Inserisce Offerta" per eseguire il caricamento nella base di dati.
+
+
+
+
 
