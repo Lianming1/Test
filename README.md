@@ -8,7 +8,7 @@
 
 - SWING( è stato usato java swing per la grafica)
 ## Architettura
- non avendo una conoscenza completa  delle tecnologie web si è scelto di usare un architettura stand-alone. 
+ Non avendo una conoscenza completa  delle tecnologie web si è scelto di usare un architettura stand-alone. 
 ## Istruzioni
  Si consiglia l'utilizzo dell'ambiente di sviluppo ecplipse per importare l'applicazione sviluppata, Inoltre è richiesto l'utilizzo della base di dati mySql.
  
@@ -61,10 +61,10 @@ L'applicazione inoltre consente l'inserimento di un offerta nella base di dati c
 - Magazzino che consente inserimento di una valore numerico intero.
 - Tipologia di sconto da spuntare:
     - Sconto quantita, nel momento che lo selezioni viene disativatto le due tipologie 		di scontistica e viene attivato il campo quantità.
-    - sconto importo, nel momento che lo selezioni viene disativatto le due tipologie di s		contistica e viene attivato il campo importo
-    - sconto stagione, nel momento che lo selezioni viene disativatto le due tipologie 		di scontistica e viene attivato il campo di selezione per selezionare quale 		delle 4 stagioni indica.
+    - Sconto importo, nel momento che lo selezioni viene disativatto le due tipologie di s		contistica e viene attivato il campo importo
+    - Sconto stagione, nel momento che lo selezioni viene disativatto le due tipologie 		di scontistica e viene attivato il campo di selezione per selezionare quale 		delle 4 stagioni indica.
 
-nel momento che si è terminato la compilazione, si deve schiacciare il bottone "Inserisce Offerta" per eseguire il caricamento nella base di dati.
+Nel momento che si è terminato la compilazione, si deve schiacciare il bottone "Inserisce Offerta" per eseguire il caricamento nella base di dati.
 
 
 
