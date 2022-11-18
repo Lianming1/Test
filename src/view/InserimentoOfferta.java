@@ -1,6 +1,6 @@
 package view;
 
-import java.awt.EventQueue;
+
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JTextField;
 import javax.swing.JCheckBox;
-import javax.swing.JList;
+
 import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
@@ -227,8 +227,15 @@ public class InserimentoOfferta extends JFrame {
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnNewButton.setBounds(263, 313, 193, 28);
 		contentPane.add(btnNewButton);
-		
-	
+		JButton btnChiudi = new JButton("Chiudi");
+		btnChiudi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+			});
+		btnChiudi.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnChiudi.setBounds(50, 313, 193, 28);
+		contentPane.add(btnChiudi);
 		chckbxScontoQuantita.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(chckbxScontoQuantita.isSelected()){
