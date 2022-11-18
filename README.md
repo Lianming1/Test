@@ -54,7 +54,7 @@ Se un prodotto di un certo fornitore risulta essere più conveniente senza scont
 Nel caso non arrivi a 3 offerte i campi dei vengono lasciati vuoti.
 
 
-L'applicazione inoltre consente inserimento di un offerta nella base di dati compilando un modulo apposta richiesto con per l'inserimento, per inserimento sarà richiesto:
+L'applicazione inoltre consente inserimento di un offerta nella base di dati compilando un modulo apposta, per inserimento sarà richiesto:
 - Fornitore, che è concesso di iniziare con un carattere alfabetico e contiene solo caratteri alfanumerici.
 - Prodotto, che è concesso di iniziare con un carattere alfabetico e contiene solo   caratteri alfanumerici.
 - Prezzo che consente inserimento di un valore numerico con la virgola.
